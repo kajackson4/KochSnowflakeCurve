@@ -1,0 +1,18 @@
+kochSnowflake k;
+
+void setup(){
+  size(650, 350);
+  frameRate(1);
+  k = new kochSnowflake();
+}
+
+void draw(){
+  background(0);
+  k.render();
+  k.nextLvl();
+  if(k.getCount()>5){
+    k.restart();
+  }
+}
+
+// credits to Daniel Shiffman for basic design
