@@ -1,3 +1,4 @@
 # KochSnowflakeCurve
 
-Template for creating the Koch Snowflake Curve Fractal with Processing
+Koch Snowflake Curve Fractal with Processing
+Credits to Daniel Shiffman for original template 
