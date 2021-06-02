@@ -1,0 +1,46 @@
+class KochLine {
+  PVector a;
+  PVector b;
+  
+  KochLine(PVector start, PVector end){
+    a = start.copy();
+    b = end.copy();
+  }
+  
+  void display(){
+    stroke(255);
+    line(a.x, a.y, b.x, b.y);
+    }
+    
+    PVector start(){
+      return a.copy();
+    }
+    
+    PVector end(){
+      return b.copy();
+    }
+    
+    PVector kochleft(){
+      PVector v = PVector.sub(b,a);
+      v.div(3);
+      v.add(a);
+      return v;
+    }
+    
+    PVector kochmiddle(){
+      PVector v = PVector.sub(b,a);
+      v.div(3);
+      PVector p = a.copy();
+      p.add(v);
+      v.rotate(-radians(60));
+      p.add(v);
+      return p;
+    }
+    
+    PVector kochright(){
+      PVector v = PVector.sub(a, b);
+      v.div(3);
+      v.add(b);
+      return v;
+    }
+  }
